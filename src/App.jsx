@@ -6,23 +6,8 @@ import { AboutMe } from './components/Pages/AboutMe/AboutMe'
 import { ContactMe } from './components/Pages/ContactMe/ContactMe'
 import { Portfolio } from './components/Pages/Portfolio/Portfolio'
 import { NotFound } from './components/NotFound/NotFound'
-import { useState, useEffect } from 'react'
 
 function App() {
-
-  const [render, setRender] = useState(false)
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setRender(true);
-    }, 2000) 
-
-    return () => clearTimeout(timeoutId); // Limpiar el timeout si el componente se desmonta antes de que se complete
-  }, [])
-  
-  if (!render) {
-    return null
-  }
 
   return (
     <>
